@@ -12,7 +12,7 @@ var port = process.env.PORT || 8080;
 // Configuration
 // ----------------------------------------------
 // mongoose.connect(db.url); 
-var db = require('./config/db');
+var db = require('./config/database');
 
 
 // Express Set Up
@@ -32,7 +32,7 @@ require('./app/routes')(app);
 // Server
 // ----------------------------------------------
 app.listen(port);               
-console.log('Magic happens on port ' + port);
+console.log('What happens on port ' + port + ', stays on port ' + port + '.');
 
 
 // Exports
