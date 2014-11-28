@@ -28,3 +28,17 @@ module.exports = function(app) {
   });
 
 };
+
+
+// Route Middleware
+function isLoggedIn(req, res, next) {
+
+  // If authenticated, proceed
+  if (req.isAuthenticated()) {
+    return next();
+  }
+
+  // If not, redirect them to login
+  res.redirect('/login');
+
+}
